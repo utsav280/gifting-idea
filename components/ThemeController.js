@@ -13,12 +13,6 @@ export default function ThemeController() {
     const theme = slug && comboBySlug[slug] ? comboBySlug[slug].theme : 'default';
 
     document.documentElement.setAttribute('data-theme', theme);
-
-    return () => {
-      if (!slugMatch) {
-        document.documentElement.setAttribute('data-theme', 'default');
-      }
-    };
   }, [pathname]);
 
   return null;

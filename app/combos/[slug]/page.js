@@ -19,15 +19,25 @@ export function generateMetadata({ params }) {
   return {
     title: combo.title,
     description: `${combo.tagline} Shop the ${combo.title} for ${combo.price}.`,
+    alternates: {
+      canonical: `/combos/${combo.slug}`
+    },
     openGraph: {
       title: combo.title,
       description: combo.tagline,
+      url: `/combos/${combo.slug}`,
       images: [
         {
           url: combo.featuredImage,
           alt: `${combo.title} hero preview`
         }
       ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: combo.title,
+      description: combo.tagline,
+      images: [combo.featuredImage]
     }
   };
 }

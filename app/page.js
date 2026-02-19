@@ -1,6 +1,32 @@
 import LayoutShell from '@/components/LayoutShell';
 import ComboCard from '@/components/ComboCard';
+import WhyWeExist from '@/components/WhyWeExist';
+import PhilosophySection from '@/components/PhilosophySection';
+import HowItWorks from '@/components/HowItWorks';
+import PackagingSection from '@/components/PackagingSection';
+import Testimonials from '@/components/Testimonials';
+import EmailCapture from '@/components/EmailCapture';
+import FAQAccordion from '@/components/FAQAccordion';
+import TrustPlatforms from '@/components/TrustPlatforms';
+import SectionFade from '@/components/SectionFade';
 import { combos } from '@/data/combos';
+
+export const metadata = {
+  title: 'Giftly Premium | Curated Gifting Boxes',
+  description:
+    'Discover premium curated gifting boxes for comfort, romance, birthdays, and workspaces. Shop confidently through trusted marketplaces.',
+  alternates: {
+    canonical: '/'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Giftly Premium | Curated Gifting Boxes',
+    description: 'Curated gifting experiences designed for meaningful moments.',
+    images: [
+      'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1200&q=80'
+    ]
+  }
+};
 
 export default function HomePage() {
   return (
@@ -12,8 +38,8 @@ export default function HomePage() {
             Curated combo boxes for people who deserve thoughtful surprises.
           </h1>
           <p className="max-w-xl text-lg text-[color:var(--muted)]">
-            Designed for 18–30 year olds who love meaningful, aesthetic gifting moments. Choose your vibe and
-            order instantly from Amazon or Meesho.
+            Designed for 18–30 year olds who love meaningful, aesthetic gifting moments. Choose your vibe and order
+            instantly from Amazon or Meesho.
           </p>
           <a
             href="#combos"
@@ -34,16 +60,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="combos" aria-labelledby="combo-grid-title" className="pb-12 pt-4">
-        <h2 id="combo-grid-title" className="text-2xl font-semibold">
-          Explore signature combos
-        </h2>
-        <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {combos.map((combo) => (
-            <ComboCard key={combo.slug} combo={combo} />
-          ))}
-        </div>
-      </section>
+      <div className="space-y-16 pb-16">
+        <SectionFade>
+          <WhyWeExist />
+        </SectionFade>
+
+        <SectionFade>
+          <PhilosophySection />
+        </SectionFade>
+
+        <SectionFade>
+          <HowItWorks />
+        </SectionFade>
+
+        <section id="combos" aria-labelledby="combo-grid-title">
+          <h2 id="combo-grid-title" className="text-2xl font-semibold md:text-3xl">
+            Explore signature combos
+          </h2>
+          <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {combos.map((combo) => (
+              <ComboCard key={combo.slug} combo={combo} />
+            ))}
+          </div>
+        </section>
+
+        <SectionFade>
+          <PackagingSection />
+        </SectionFade>
+
+        <SectionFade>
+          <TrustPlatforms />
+        </SectionFade>
+
+        <SectionFade>
+          <Testimonials />
+        </SectionFade>
+
+        <SectionFade>
+          <EmailCapture />
+        </SectionFade>
+
+        <SectionFade>
+          <FAQAccordion />
+        </SectionFade>
+      </div>
     </LayoutShell>
   );
 }

@@ -7,6 +7,7 @@ import ComboLoader from '@/components/ComboLoader';
 
 export default function ComboPageClient({ combo }) {
   const [showLoader, setShowLoader] = useState(true);
+  const platformLabel = combo.purchaseUrl.includes('meesho') ? 'Available on Meesho' : 'Available on Amazon';
 
   useEffect(() => {
     const timer = window.setTimeout(() => setShowLoader(false), 1800);
@@ -45,7 +46,7 @@ export default function ComboPageClient({ combo }) {
               rel="noreferrer"
               className="inline-flex rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-[color:var(--button-text)]"
             >
-              Available on Amazon
+              {platformLabel}
             </a>
           </div>
         </section>
