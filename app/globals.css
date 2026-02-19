@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f8f5f0;
+  --surface: #fffdf9;
+  --text: #292420;
+  --muted: #6d655f;
+  --accent: #b87f4d;
+  --button-text: #ffffff;
+}
+
+html[data-theme='comfort'] {
+  --bg: #f7f1e8;
+  --surface: #fffaf3;
+  --text: #2b241d;
+  --muted: #6d6157;
+  --accent: #ad7c4f;
+  --button-text: #ffffff;
+}
+
+html[data-theme='romantic'] {
+  --bg: #2c2026;
+  --surface: #3a2a32;
+  --text: #f6e9ee;
+  --muted: #d4bbc5;
+  --accent: #d07691;
+  --button-text: #fff5f8;
+}
+
+html[data-theme='birthday'] {
+  --bg: #fff4dc;
+  --surface: #fffaf0;
+  --text: #4a3821;
+  --muted: #7b6549;
+  --accent: #d09a32;
+  --button-text: #fffaf2;
+}
+
+html[data-theme='desk'] {
+  --bg: #eceff2;
+  --surface: #f8fafb;
+  --text: #23282d;
+  --muted: #5f6872;
+  --accent: #4f6478;
+  --button-text: #f7f9fc;
+}
+
+* {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 40%, white 60%);
+}
