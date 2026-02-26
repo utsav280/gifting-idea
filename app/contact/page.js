@@ -1,11 +1,12 @@
-import LayoutShell from '@/components/LayoutShell';
+import LayoutShell from "@/components/LayoutShell";
 
 export const metadata = {
-  title: 'Contact Giftly Premium',
-  description: 'Reach the Giftly Premium team for questions, collaborations, and gifting support.',
+  title: "Contact AROHA",
+  description:
+    "Reach the AROHA team for questions, collaborations, and gifting support.",
   alternates: {
-    canonical: '/contact'
-  }
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {
@@ -13,15 +14,22 @@ export default function ContactPage() {
     <LayoutShell>
       <section className="grid gap-8 py-8 lg:grid-cols-[1.1fr_0.9fr]">
         <article className="space-y-4">
-          <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--muted)]">Contact</p>
-          <h1 className="text-4xl font-semibold md:text-5xl">We&apos;d love to hear from you.</h1>
+          <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--muted)]">
+            Contact
+          </p>
+          <h1 className="text-4xl font-semibold md:text-5xl">
+            We&apos;d love to hear from you.
+          </h1>
           <p className="text-[color:var(--muted)]">
-            Have a question, brand collaboration idea, or feedback? Drop us a message and our team will get back to
-            you soon.
+            Have a question, brand collaboration idea, or feedback? Drop us a
+            message and our team will get back to you soon.
           </p>
           <div className="rounded-2xl border border-black/5 bg-[color:var(--surface)] p-5 text-sm text-[color:var(--muted)]">
             <p>
-              Email: <a href="mailto:hello@giftlypremium.com">hello@giftlypremium.com</a>
+              Email:{" "}
+              <a href="mailto:hello@giftlypremium.com">
+                hello@giftlypremium.com
+              </a>
             </p>
             <p className="mt-2">Instagram: @giftlypremium</p>
           </div>
