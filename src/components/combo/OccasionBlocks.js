@@ -10,7 +10,7 @@ export default function OccasionBlocks({ combo }) {
         <h2 className="text-2xl font-semibold md:text-3xl">Perfect occasion scenarios</h2>
         <div className="grid gap-4 md:grid-cols-3">
           {content.occasions.map((occasion) => (
-            <article key={occasion.title} className="rounded-2xl border border-black/5 bg-[color:var(--surface)] p-6">
+            <article key={occasion.title} className="rounded-[var(--radius-card)] border border-black/5 bg-[color:var(--surface)] shadow-[var(--shadow-card)] p-6">
               <h3 className="text-lg font-semibold">{occasion.title}</h3>
               <p className="mt-2 text-sm text-[color:var(--muted)]">{occasion.description}</p>
             </article>

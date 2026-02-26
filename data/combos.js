@@ -7,18 +7,18 @@ export const combos = [
     theme: 'comfort',
     idealFor: 'Unwinding after long days, self-care Sundays, and thoughtful gifting.',
     featuredImage:
-      'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1400&q=80',
+      'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1400&q=80',
     purchaseUrl: 'https://www.amazon.in/',
     items: [
       {
         name: 'Minimal Ceramic Mug',
         image:
-          'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=1000&q=80'
+          'https://images.unsplash.com/photo-1572119865084-43c285814d63?auto=format&fit=crop&w=1000&q=80'
       },
       {
         name: 'Premium Tea Blend',
         image:
-          'https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=1000&q=80'
+          'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1000&q=80'
       },
       {
         name: 'Soy Wax Candle',
@@ -28,7 +28,7 @@ export const combos = [
       {
         name: 'Handmade Wooden Coaster',
         image:
-          'https://images.unsplash.com/photo-1582582621959-48d27397dc69?auto=format&fit=crop&w=1000&q=80'
+          'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80'
       }
     ]
   },
@@ -40,8 +40,8 @@ export const combos = [
     theme: 'romantic',
     idealFor: 'Anniversaries, surprise date setups, or meaningful first celebrations.',
     featuredImage:
-      'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1400&q=80',
-    purchaseUrl: 'https://www.meesho.com/',
+      'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1400&q=80',
+    purchaseUrl: 'https://www.amazon.in/',
     items: [
       {
         name: 'Couple Coffee Cups',
@@ -51,7 +51,7 @@ export const combos = [
       {
         name: 'Ambient Candle',
         image:
-          'https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?auto=format&fit=crop&w=1000&q=80'
+          'https://images.unsplash.com/photo-1602524812799-9de9188a5f0f?auto=format&fit=crop&w=1000&q=80'
       },
       {
         name: 'Craft Chocolate Pack',
@@ -61,7 +61,7 @@ export const combos = [
       {
         name: 'Conversation Dice Set',
         image:
-          'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=1000&q=80'
+          'https://images.unsplash.com/photo-1634395422292-48a019730f44?auto=format&fit=crop&w=1000&q=80'
       }
     ]
   },
@@ -79,17 +79,17 @@ export const combos = [
       {
         name: 'Celebration Mug',
         image:
-          'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1000&q=80'
+          'https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&w=1000&q=80'
       },
       {
         name: 'Birthday Candle',
         image:
-          'https://images.unsplash.com/photo-1602874801006-18db736736e0?auto=format&fit=crop&w=1000&q=80'
+          'https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=1000&q=80'
       },
       {
         name: 'Confetti Mix',
         image:
-          'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80'
+          'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1000&q=80'
       },
       {
         name: 'Mini Party Banner',
@@ -106,13 +106,13 @@ export const combos = [
     theme: 'desk',
     idealFor: 'Students, creators, and professionals building a productive routine.',
     featuredImage:
-      'https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=1400&q=80',
-    purchaseUrl: 'https://www.meesho.com/',
+      'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1400&q=80',
+    purchaseUrl: 'https://www.amazon.in/',
     items: [
       {
         name: 'Minimal Work Mug',
         image:
-          'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=1000&q=80'
+          'https://images.unsplash.com/photo-1572119865084-43c285814d63?auto=format&fit=crop&w=1000&q=80'
       },
       {
         name: 'Hardcover Notebook',
@@ -122,7 +122,7 @@ export const combos = [
       {
         name: 'Premium Pen',
         image:
-          'https://images.unsplash.com/photo-1583485088034-697b5bc36b35?auto=format&fit=crop&w=1000&q=80'
+          'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=80'
       },
       {
         name: 'Desk Plant',

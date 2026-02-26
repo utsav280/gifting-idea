@@ -12,16 +12,16 @@ import SectionFade from '@/components/SectionFade';
 import { combos } from '@/data/combos';
 
 export const metadata = {
-  title: 'Giftly Premium | Curated Gifting Boxes',
+  title: 'AROHA | Curated Premium Gifting Boxes',
   description:
-    'Discover premium curated gifting boxes for comfort, romance, birthdays, and workspaces. Shop confidently through trusted marketplaces.',
+    'Discover AROHA premium curated gifting boxes for comfort, romance, birthdays, and workspaces. Shop confidently through trusted marketplaces.',
   alternates: {
     canonical: '/'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Giftly Premium | Curated Gifting Boxes',
-    description: 'Curated gifting experiences designed for meaningful moments.',
+    title: 'AROHA | Curated Premium Gifting Boxes',
+    description: 'Curated gifting experiences designed around real emotions.',
     images: [
       'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1200&q=80'
     ]

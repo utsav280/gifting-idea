@@ -4,7 +4,7 @@ export default function WhyBetterSection() {
   return (
     <FadeInSection>
       <div className="grid gap-4 md:grid-cols-2">
-        <article className="rounded-2xl border border-black/5 bg-[color:var(--surface)] p-6">
+        <article className="rounded-[var(--radius-card)] border border-black/5 bg-[color:var(--surface)] shadow-[var(--shadow-card)] p-6">
           <h3 className="text-lg font-semibold">Typical gift shopping</h3>
           <ul className="mt-3 space-y-2 text-sm text-[color:var(--muted)]">
             <li>• Random picks with no cohesion</li>
