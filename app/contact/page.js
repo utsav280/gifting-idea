@@ -20,18 +20,15 @@ export default function ContactPage() {
           <h1 className="text-4xl font-semibold md:text-5xl">
             We&apos;d love to hear from you.
           </h1>
-          <p className="text-[color:var(--muted)]">
+          <p className="text-[color:var(--muted)] leading-relaxed">
             Have a question, brand collaboration idea, or feedback? Drop us a
             message and our team will get back to you soon.
           </p>
           <div className="rounded-2xl border border-black/5 bg-[color:var(--surface)] p-5 text-sm text-[color:var(--muted)]">
             <p>
-              Email:{" "}
-              <a href="mailto:hello@giftlypremium.com">
-                hello@giftlypremium.com
-              </a>
+              Email: <a href="mailto:hello@aroha.in">hello@aroha.in</a>
             </p>
-            <p className="mt-2">Instagram: @giftlypremium</p>
+            <p className="mt-2">Instagram: @aroha.in</p>
           </div>
         </article>
 
@@ -71,7 +68,7 @@ export default function ContactPage() {
           </div>
           <button
             type="submit"
-            className="rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-[color:var(--button-text)]"
+            className="rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-[color:var(--button-text)] transition duration-300 active:scale-[0.98]"
           >
             Send message
           </button>

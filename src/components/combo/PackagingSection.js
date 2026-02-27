@@ -15,14 +15,14 @@ export default function PackagingSection({ combo }) {
         </p>
         <div className="grid gap-4 md:grid-cols-3">
           {images.map((image, index) => (
-            <figure key={image} className="overflow-hidden rounded-2xl border border-black/5 bg-[color:var(--surface)]">
+            <figure key={image} className="group overflow-hidden rounded-[var(--radius-card)] border border-black/5 bg-[color:var(--surface)] shadow-[var(--shadow-card)] transition duration-300 hover:-translate-y-0.5">
               <div className="relative h-48">
                 <Image
                   src={image}
                   alt={`${combo.title} packaging detail ${index + 1}`}
                   fill
                   sizes="(min-width: 768px) 33vw, 100vw"
-                  className="object-cover"
+                  className="object-cover transition duration-300 group-hover:scale-[1.03]"
                 />
               </div>
             </figure>

@@ -12,16 +12,16 @@ import SectionFade from "@/components/SectionFade";
 import { combos } from "@/data/combos";
 
 export const metadata = {
-  title: "AROHA | Curated Gifting Boxes",
+  title: "AROHA | Curated Premium Gifting Boxes",
   description:
-    "Discover premium curated gifting boxes for comfort, romance, birthdays, and workspaces. Shop confidently through trusted marketplaces.",
+    "Discover AROHA premium curated gifting boxes for comfort, romance, birthdays, and workspaces. Shop confidently through trusted marketplaces.",
   alternates: {
     canonical: "/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AROHA | Curated Gifting Boxes",
-    description: "Curated gifting experiences designed for meaningful moments.",
+    title: "AROHA | Curated Premium Gifting Boxes",
+    description: "Curated gifting experiences designed around real emotions.",
     images: [
       "https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1200&q=80",
     ],
@@ -40,8 +40,8 @@ export default function HomePage() {
             Curated combo boxes for people who deserve thoughtful surprises.
           </h1>
           <p className="max-w-xl text-lg text-[color:var(--muted)]">
-            Designed for 18–30 year olds who love meaningful, aesthetic gifting
-            moments. Choose your vibe and order instantly from Amazon or Meesho.
+            Designed for people who love meaningful, aesthetic gifting moments.
+            Choose your vibe and order instantly from Amazon.
           </p>
           <a
             href="#combos"

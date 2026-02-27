@@ -1,29 +1,29 @@
 import "./globals.css";
 import ThemeController from "@/components/ThemeController";
 
-const siteUrl = "https://giftlypremium.example.com";
+const siteUrl = "https://aroha.in";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "AROHA | Curated Gifting Combos",
+    default: "AROHA | Premium Curated Gifting Combos",
     template: "%s | AROHA",
   },
   description:
-    "Premium gifting combos for comfort, romance, birthdays, and desk upgrades. Discover curated experiences and shop instantly via trusted marketplaces.",
+    "AROHA crafts premium gifting combos for comfort, romance, birthdays, and desk upgrades. Shop securely on trusted marketplaces.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "AROHA",
-    description: "Curated gifting combos designed for memorable moments.",
+    description: "Premium curated gifting boxes designed around real emotions.",
     type: "website",
     url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
     title: "AROHA",
-    description: "Curated gifting combos designed for memorable moments.",
+    description: "Premium curated gifting boxes designed around real emotions.",
   },
 };
 

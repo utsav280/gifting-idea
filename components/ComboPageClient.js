@@ -39,11 +39,11 @@ export default function ComboPageClient({ combo }) {
               fill
               priority
               sizes="(min-width: 1024px) 58vw, 100vw"
-              className="object-cover"
+              className="object-cover transition duration-300 group-hover:scale-[1.02]"
             />
           </div>
           <div className="space-y-5">
-            <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--muted)]">Signature Combo</p>
+            <p className="text-xs uppercase tracking-[var(--label-track)] text-[color:var(--muted)]">Signature Combo</p>
             <h1 className="text-4xl font-semibold leading-tight md:text-5xl">{combo.title}</h1>
             <p className="max-w-lg text-lg text-[color:var(--muted)]">{combo.tagline}</p>
             <p className="text-3xl font-semibold text-[color:var(--accent)]">{combo.price}</p>
@@ -51,7 +51,7 @@ export default function ComboPageClient({ combo }) {
               href={combo.purchaseUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-[color:var(--button-text)]"
+              className="inline-flex rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-[color:var(--button-text)] shadow-[var(--shadow-card)] transition duration-300 hover:-translate-y-0.5 active:scale-[0.98]"
             >
               {platformLabel}
             </a>
@@ -66,7 +66,7 @@ export default function ComboPageClient({ combo }) {
             {combo.items.map((item, index) => (
               <motion.figure
                 key={item.name}
-                className="overflow-hidden rounded-2xl border border-black/5 bg-[color:var(--surface)]"
+                className="group overflow-hidden rounded-[var(--radius-card)] border border-black/5 bg-[color:var(--surface)] shadow-[var(--shadow-card)]"
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: showLoader ? 0 : 1, y: showLoader ? 8 : 0 }}
                 transition={{ duration: 0.35, delay: showLoader ? 0 : 0.05 * index }}
@@ -77,7 +77,7 @@ export default function ComboPageClient({ combo }) {
                     alt={`${item.name} from ${combo.title}`}
                     fill
                     sizes="(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover"
+                    className="object-cover transition duration-300 group-hover:scale-[1.02]"
                   />
                 </div>
                 <figcaption className="p-4 text-sm font-medium">{item.name}</figcaption>
@@ -99,7 +99,7 @@ export default function ComboPageClient({ combo }) {
         <OccasionBlocks combo={combo} />
         <TrustStrip combo={combo} />
 
-        <section className="rounded-3xl border border-black/5 bg-[color:var(--surface)] p-7 text-center md:p-9">
+        <section className="rounded-[calc(var(--radius-card)+0.2rem)] border border-black/5 bg-[color:var(--surface)] p-7 text-center shadow-[var(--shadow-card)] md:p-9">
           <h2 className="text-2xl font-semibold">Ready to gift with confidence?</h2>
           <p className="mx-auto mt-3 max-w-2xl text-[color:var(--muted)]">
             Order now from a trusted marketplace and turn your next gifting moment into something memorable.

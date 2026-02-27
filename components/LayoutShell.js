@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import BuiltWithCare from "@/components/BuiltWithCare";
 
 export default function LayoutShell({ children }) {
   return (
@@ -23,7 +24,7 @@ export default function LayoutShell({ children }) {
           </Link>
           <Link
             href="/contact"
-            className="rounded-full border border-[color:var(--accent)] px-4 py-2 font-medium"
+            className="rounded-full border border-[color:var(--accent)] px-4 py-2 font-medium transition duration-300 hover:shadow-soft"
           >
             Contact
           </Link>
@@ -32,6 +33,7 @@ export default function LayoutShell({ children }) {
       <main className="mx-auto w-full max-w-6xl px-5 pb-20 md:px-8">
         {children}
       </main>
+      <BuiltWithCare />
       <Footer />
     </div>
   );
