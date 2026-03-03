@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import BuiltWithCare from "@/components/BuiltWithCare";
@@ -6,8 +7,17 @@ export default function LayoutShell({ children }) {
   return (
     <div className="min-h-screen">
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-6 md:px-8">
-        <Link href="/" className="text-xl font-semibold tracking-tight">
-          AROHA
+        {/* <Link href="/" className="text-xl font-semibold tracking-tight">
+          AROHA */}
+        <Link href="/" className="inline-flex items-center">
+          <Image
+            src="/images/aroha-logo.jpeg"
+            alt="AROHA logo"
+            width={160}
+            height={60}
+            priority
+            className="h-10 w-auto object-contain"
+          />
         </Link>
         <nav className="flex items-center gap-2 text-sm md:gap-4">
           <Link

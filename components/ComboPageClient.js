@@ -1,20 +1,22 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { AnimatePresence, motion } from 'framer-motion';
-import ComboLoader from '@/components/ComboLoader';
-import ExperienceSection from '@/src/components/combo/ExperienceSection';
-import PackagingSection from '@/src/components/combo/PackagingSection';
-import WhyBetterSection from '@/src/components/combo/WhyBetterSection';
-import OccasionBlocks from '@/src/components/combo/OccasionBlocks';
-import TrustStrip from '@/src/components/combo/TrustStrip';
-import ComboFAQ from '@/src/components/combo/ComboFAQ';
-import ExploreOtherCombos from '@/src/components/combo/ExploreOtherCombos';
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
+import ComboLoader from "@/components/ComboLoader";
+import ExperienceSection from "@/src/components/combo/ExperienceSection";
+import PackagingSection from "@/src/components/combo/PackagingSection";
+import WhyBetterSection from "@/src/components/combo/WhyBetterSection";
+import OccasionBlocks from "@/src/components/combo/OccasionBlocks";
+import TrustStrip from "@/src/components/combo/TrustStrip";
+import ComboFAQ from "@/src/components/combo/ComboFAQ";
+import ExploreOtherCombos from "@/src/components/combo/ExploreOtherCombos";
 
 export default function ComboPageClient({ combo }) {
   const [showLoader, setShowLoader] = useState(true);
-  const platformLabel = combo.purchaseUrl.includes('meesho') ? 'Available on Meesho' : 'Available on Amazon';
+  const platformLabel = combo.purchaseUrl.includes("meesho")
+    ? "Available on Meesho"
+    : "Available on Amazon";
 
   useEffect(() => {
     const timer = window.setTimeout(() => setShowLoader(false), 1800);
@@ -23,19 +25,22 @@ export default function ComboPageClient({ combo }) {
 
   return (
     <>
-      <AnimatePresence>{showLoader && <ComboLoader title={combo.title} />}</AnimatePresence>
+      <AnimatePresence>
+        {showLoader && <ComboLoader title={combo.title} />}
+      </AnimatePresence>
 
       <motion.article
         className="space-y-14 pb-12"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: showLoader ? 0 : 1, y: showLoader ? 10 : 0 }}
-        transition={{ duration: 0.45, ease: 'easeOut' }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
       >
         <section className="grid gap-8 lg:grid-cols-[1.12fr_0.88fr] lg:items-center">
           <div className="relative min-h-[320px] overflow-hidden rounded-3xl border border-black/5 shadow-soft">
             <Image
               src={combo.featuredImage}
-              alt={`${combo.title} hero image`}
+              // alt={`${combo.title} hero image`}
+              alt={`AROHA ${combo.title} Hero`}
               fill
               priority
               sizes="(min-width: 1024px) 58vw, 100vw"
@@ -43,10 +48,18 @@ export default function ComboPageClient({ combo }) {
             />
           </div>
           <div className="space-y-5">
-            <p className="text-xs uppercase tracking-[var(--label-track)] text-[color:var(--muted)]">Signature Combo</p>
-            <h1 className="text-4xl font-semibold leading-tight md:text-5xl">{combo.title}</h1>
-            <p className="max-w-lg text-lg text-[color:var(--muted)]">{combo.tagline}</p>
-            <p className="text-3xl font-semibold text-[color:var(--accent)]">{combo.price}</p>
+            <p className="text-xs uppercase tracking-[var(--label-track)] text-[color:var(--muted)]">
+              Signature Combo
+            </p>
+            <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
+              {combo.title}
+            </h1>
+            <p className="max-w-lg text-lg text-[color:var(--muted)]">
+              {combo.tagline}
+            </p>
+            <p className="text-3xl font-semibold text-[color:var(--accent)]">
+              {combo.price}
+            </p>
             <a
               href={combo.purchaseUrl}
               target="_blank"
@@ -69,28 +82,39 @@ export default function ComboPageClient({ combo }) {
                 className="group overflow-hidden rounded-[var(--radius-card)] border border-black/5 bg-[color:var(--surface)] shadow-[var(--shadow-card)]"
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: showLoader ? 0 : 1, y: showLoader ? 8 : 0 }}
-                transition={{ duration: 0.35, delay: showLoader ? 0 : 0.05 * index }}
+                transition={{
+                  duration: 0.35,
+                  delay: showLoader ? 0 : 0.05 * index,
+                }}
               >
                 <div className="relative h-44">
                   <Image
                     src={item.image}
-                    alt={`${item.name} from ${combo.title}`}
+                    // alt={`${item.name} from ${combo.title}`}
+                    alt={`AROHA ${combo.title} - ${item.name}`}
                     fill
                     sizes="(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover transition duration-300 group-hover:scale-[1.02]"
                   />
                 </div>
-                <figcaption className="p-4 text-sm font-medium">{item.name}</figcaption>
+                <figcaption className="p-4 text-sm font-medium">
+                  {item.name}
+                </figcaption>
               </motion.figure>
             ))}
           </div>
         </section>
 
-        <section aria-labelledby="ideal-for-heading" className="rounded-3xl border border-black/5 bg-[color:var(--surface)] p-7">
+        <section
+          aria-labelledby="ideal-for-heading"
+          className="rounded-3xl border border-black/5 bg-[color:var(--surface)] p-7"
+        >
           <h2 id="ideal-for-heading" className="text-2xl font-semibold">
             Ideal for
           </h2>
-          <p className="mt-3 max-w-3xl text-[color:var(--muted)]">{combo.idealFor}</p>
+          <p className="mt-3 max-w-3xl text-[color:var(--muted)]">
+            {combo.idealFor}
+          </p>
         </section>
 
         <ExperienceSection combo={combo} />
@@ -100,9 +124,12 @@ export default function ComboPageClient({ combo }) {
         <TrustStrip combo={combo} />
 
         <section className="rounded-[calc(var(--radius-card)+0.2rem)] border border-black/5 bg-[color:var(--surface)] p-7 text-center shadow-[var(--shadow-card)] md:p-9">
-          <h2 className="text-2xl font-semibold">Ready to gift with confidence?</h2>
+          <h2 className="text-2xl font-semibold">
+            Ready to gift with confidence?
+          </h2>
           <p className="mx-auto mt-3 max-w-2xl text-[color:var(--muted)]">
-            Order now from a trusted marketplace and turn your next gifting moment into something memorable.
+            Order now from a trusted marketplace and turn your next gifting
+            moment into something memorable.
           </p>
           <a
             href={combo.purchaseUrl}

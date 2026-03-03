@@ -1,3 +1,4 @@
+import Image from "next/image";
 import LayoutShell from "@/components/LayoutShell";
 import ComboCard from "@/components/ComboCard";
 import WhyWeExist from "@/components/WhyWeExist";
@@ -22,9 +23,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "AROHA | Curated Premium Gifting Boxes",
     description: "Curated gifting experiences designed around real emotions.",
-    images: [
-      "https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1200&q=80",
-    ],
+    images: ["/images/comfort-box.png"],
   },
 };
 
@@ -32,7 +31,18 @@ export default function HomePage() {
   return (
     <LayoutShell>
       <section className="grid gap-8 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-        <div className="space-y-6">
+        {/* <div className="space-y-6"> */}
+        <div className="relative order-2 min-h-[280px] overflow-hidden rounded-[var(--radius-card)] border border-black/5 shadow-[var(--shadow-card)] lg:order-1">
+          <Image
+            src="/images/comfort-box.png"
+            alt="AROHA Comfort Gift Box"
+            fill
+            priority
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </div>
+        <div className="order-1 space-y-6 lg:order-2">
           <p className="text-xs uppercase tracking-[0.24em] text-[color:var(--muted)]">
             Premium gifting startup
           </p>
@@ -51,7 +61,8 @@ export default function HomePage() {
           </a>
         </div>
 
-        <div className="rounded-3xl border border-black/5 bg-[color:var(--surface)] p-7 shadow-soft">
+        {/* <div className="rounded-3xl border border-black/5 bg-[color:var(--surface)] p-7 shadow-soft"> */}
+        <div className="rounded-3xl border border-black/5 bg-[color:var(--surface)] p-7 shadow-soft lg:col-span-2">
           <h2 className="text-xl font-semibold">Built for modern gifting</h2>
           <ul className="mt-4 space-y-3 text-[color:var(--muted)]">
             <li>• Comfort reset moments for quiet evenings.</li>
